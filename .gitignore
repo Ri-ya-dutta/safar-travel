@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+safar/node_modules/
+server/node_modules/
+
+# Environment variables (NEVER push this)
+.env
+safar/.env
+server/.env
+
+# Build output
+dist/
+safar/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
