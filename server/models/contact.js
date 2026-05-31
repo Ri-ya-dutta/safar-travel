@@ -1,4 +1,3 @@
-// server/models/contact.js
 import mongoose from 'mongoose';
 
 const contactSchema = new mongoose.Schema({
@@ -14,11 +13,7 @@ const contactSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-});
+}, { timestamps: true });
 
 const Contact = mongoose.model('Contact', contactSchema);
 
