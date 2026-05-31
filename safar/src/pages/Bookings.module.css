@@ -1,0 +1,74 @@
+.bookingSection {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bookingForm label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: #444;
+}
+
+.bookingForm input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.bookingForm input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Tailwind's blue-500 */
+}
+
+.bookingForm small {
+  color: #ef4444; /* Tailwind's red-500 */
+  margin-top: 4px;
+  display: block;
+  font-size: 0.875rem;
+}
+
+.bookingForm button {
+  padding: 12px 16px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bookingForm button:hover {
+  background-color: #2563eb; /* Tailwind's blue-600 */
+}
+.success {
+  color: #22c55e; /* Tailwind's green-500 */
+  margin-top: 12px;
+}
+
+.error {
+  color: #ef4444; /* Tailwind's red-500 */
+  margin-top: 12px;
+}

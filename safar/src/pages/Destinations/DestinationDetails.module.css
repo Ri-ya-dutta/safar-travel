@@ -1,0 +1,10 @@
+/* DestinationDetails.module.css */
+.detailsContainer {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.detailsTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}

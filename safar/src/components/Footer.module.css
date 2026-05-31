@@ -1,0 +1,101 @@
+.footer {
+  background-color: #1e1513e8;
+  padding: 2rem;
+  color: #83bc47;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer a {
+  text-decoration: none;
+  /* color: inherit; */
+}
+
+.contactList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.phoneIcon {
+  color: #28a745;
+  margin-right: 10px;
+}
+
+.emailIcon {
+  color: #dc3545;
+  margin-right: 10px;
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: unset;
+}
+
+.facebook {
+  color: #1877f2;
+  margin-right: 10px;
+}
+
+.instagram {
+  color: #e1306c;
+}
+
+.twitter {
+  color: #1da1f2;
+}
+
+.bottomText {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* .locationSection {
+  margin-top: 2rem;
+} */
+
+.locationSection h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+  color: #cccecd;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.locationIcon {
+  color: #ff6347;
+  font-size: 1.2rem;
+}
+
+.mapContainer {
+  border-radius: 8px;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}

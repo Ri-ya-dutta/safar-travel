@@ -1,0 +1,112 @@
+.destinationsContainer {
+  padding: 2rem;
+}
+.heading {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+}
+
+.centerButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.centerButtons button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #8e7a91; /* Customize color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.centerButtons button:hover {
+  background-color: #6b5b70;
+}
+.filterSection button,
+.subcategorySection button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #533e57ad;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filterSection button:hover,
+.subcategorySection button:hover {
+  background-color: #ccc;
+}
+
+/* .active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.activeSub {
+  background-color: #2196f3;
+  color: white;
+} */
+.active {
+  background-color: #4caf50 !important;
+}
+
+.activeSub {
+  background-color: #2196f3 !important;
+}
+
+.cardsGrid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.cardInfo {
+  padding: 1rem;
+}
+
+.cardInfo h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.cardInfo p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cardInfo span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  background-color: #eee;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  color: #444;
+}
