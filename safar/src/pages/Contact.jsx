@@ -1,17 +1,6 @@
-// function Contact() {
-//   return (
-//     <div className="text-center mt-5">
-//       <h2>Contact Us</h2>
-//       <p>We'd love to hear from you. Get in touch with us for any help!</p>
-//     </div>
-//   );
-// }
-
-// export default Contact;
-// src/pages/Contact.jsx
 import React, { useState } from 'react';
 import styles from './Contact.module.css';
-import axios from 'axios';
+import { createContact } from '../services/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -36,20 +25,6 @@ const Contact = () => {
     return newErrors;
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const validationErrors = validate();
-  //   setErrors(validationErrors);
-
-  //   if (Object.keys(validationErrors).length === 0) {
-  //     // Submit logic here (e.g., API call or console.log)
-  //     console.log('Form submitted:', formData);
-  //     setSubmitted(true);
-  //     setFormData({ fullName: '', email: '', message: '' });
-  //   }
-  // };
-  
-// Inside handleSubmit
 const handleSubmit = async (e) => {
   e.preventDefault();
   const validationErrors = validate();
@@ -57,7 +32,7 @@ const handleSubmit = async (e) => {
 
   if (Object.keys(validationErrors).length === 0) {
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await createContact(formData);
       setSubmitted(true);
       setFormData({ fullName: '', email: '', message: '' });
     } catch (error) {

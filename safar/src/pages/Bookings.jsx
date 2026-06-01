@@ -1,15 +1,5 @@
-// // function Bookings() {
-// //   return (
-// //     <div className="text-center mt-5">
-// //       <h2>Your Bookings</h2>
-// //       <p>View and manage all your travel bookings here.</p>
-// //     </div>
-// //   );
-// // }
-
-// // export default Bookings;
 import React, { useState } from 'react';
-import axios from 'axios';
+import { createBooking } from '../services/api';
 import styles from './Bookings.module.css';
 
 const Bookings = () => {
@@ -55,7 +45,7 @@ const Bookings = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/bookings', formData);
+      await createBooking(formData);
       setSuccessMessage('Booking successful!');
       setFormData({
         name: '',

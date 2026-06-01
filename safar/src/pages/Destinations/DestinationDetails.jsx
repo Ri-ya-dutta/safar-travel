@@ -1,34 +1,22 @@
-// src/pages/Destinations/DestinationDetails.jsx
-// import React from "react";
-
-// const DestinationDetails = ({ destination }) => {
-//   if (!destination) return <p>No destination selected.</p>;
-
-//   return (
-//     <div>
-//       <h2>{destination.name}</h2>
-//       <p>{destination.description}</p>
-//       <img src={destination.imageUrl} alt={destination.name} />
-//     </div>
-//   );
-// };
-
-// export default DestinationDetails;
-// DestinationDetails.jsx
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
-import styles from "./DestinationDetails.module.css"; // Adjust path if needed
+import { getDestinationById } from "../../services/api";
+import styles from "./DestinationDetails.module.css";
 
 const DestinationDetails = () => {
   const { id } = useParams();
   const [destination, setDestination] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/api/destinations/${id}`)
-      .then((res) => setDestination(res.data))
-      .catch((err) => console.error("Failed to fetch details:", err));
+    const fetchDestination = async () => {
+      try {
+        const data = await getDestinationById(id);
+        setDestination(data);
+      } catch (err) {
+        console.error("Failed to fetch details:", err);
+      }
+    };
+    fetchDestination();
   }, [id]);
 
   if (!destination) return <p>Loading...</p>;
@@ -36,7 +24,7 @@ const DestinationDetails = () => {
   return (
     <div className={styles.detailsContainer}>
       <h2>{destination.name}</h2>
-      <img src={destination.imageUrl} alt={destination.name} className={styles.image} />
+      <img src={destination.image} alt={destination.name} className={styles.image} />
       <p><strong>Category:</strong> {destination.category}</p>
       <p><strong>Subcategory:</strong> {destination.subcategory}</p>
       <p><strong>Description:</strong> {destination.description}</p>
