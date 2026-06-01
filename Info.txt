@@ -1,0 +1,2 @@
+path - mongodb+srv://riyadutta5542_db_user:YfTa9LwY5YLdvZ2u@cluster0.mbdm907.mongodb.net/?appName=Cluster0
+pass = YfTa9LwY5YLdvZ2u

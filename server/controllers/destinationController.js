@@ -5,6 +5,7 @@ export const getAllDestinations = async (req, res) => {
     const destinations = await Destination.find(); 
     res.json(destinations);
   } catch (err) {
+    console.error('Destination error:', err); // ← add this temporarily
     res.status(500).json({ error: 'Failed to fetch destinations' });
   }
 };
