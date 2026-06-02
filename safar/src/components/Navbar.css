@@ -1,0 +1,8 @@
+/* The Glassmorphism Effect */
+.glass-navbar {
+  background: rgba(0, 0, 0, 0.4) !important; /* Semi-transparent black background */
+  backdrop-filter: blur(12px); /* The frosted glass magic */
+  -webkit-backdrop-filter: blur(12px); /* For Safari browsers */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: A very faint bottom border */
+  transition: all 0.3s ease;
+}

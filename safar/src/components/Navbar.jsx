@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import './Navbar.css'; 
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top px-3 glass-navbar">
       <NavLink className="navbar-brand" to="/">Safar</NavLink>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span className="navbar-toggler-icon"></span>

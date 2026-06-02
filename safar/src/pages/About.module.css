@@ -1,4 +1,4 @@
-.zoomImg {
+/* .zoomImg {
   transition: transform 0.3s ease;
 }
 
@@ -39,4 +39,110 @@
 
 .cardImage:hover {
   transform: scale(1.05);
+} */
+
+/* --- Gallery Grid & Cards --- */
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  justify-content: center;
+}
+
+.galleryCard {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden; /* Keeps image corners rounded inside the card */
+}
+
+.galleryCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  height: 250px;
+  object-fit: cover; /* Keeps images looking realistic */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cardImage:hover {
+  transform: scale(1.05);
+}
+
+.cardText {
+  color: #444;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* --- Custom Lightbox Styles --- */
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050; /* Higher than fixed navbar */
+}
+
+.lightboxContent {
+  text-align: center;
+}
+
+.lightboxContent img {
+  max-height: 80vh;
+  max-width: 90vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightboxContent p {
+  color: white;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Lightbox Buttons */
+.lightboxPrev,
+.lightboxNext,
+.lightboxClose {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  user-select: none; /* Prevents text selection when clicking fast */
+}
+
+.lightboxPrev {
+  left: 30px;
+  font-size: 40px;
+}
+
+.lightboxNext {
+  right: 30px;
+  font-size: 40px;
+}
+
+.lightboxClose {
+  top: 25px;
+  right: 35px;
+  font-size: 30px;
+}
+
+.lightboxPrev:hover,
+.lightboxNext:hover,
+.lightboxClose:hover {
+  color: #00c6ff; /* Matches your brand color from the home page */
+  transform: scale(1.2);
 }

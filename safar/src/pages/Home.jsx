@@ -49,7 +49,7 @@ const highlights = [
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>Escape to Your Dream Destination</h1>
-          <p>Book your perfect getaway with EscapeHub today.</p>
+          <p>Book your perfect getaway with Safar today.</p>
           <Link to="/bookings" className={styles.ctaButton}>
             Book Now
           </Link>
